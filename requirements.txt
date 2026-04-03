@@ -1,0 +1,4 @@
+edgartools
+finnhub-python
+yfinance
+pandas
