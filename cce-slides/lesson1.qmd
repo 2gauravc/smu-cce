@@ -1,0 +1,16 @@
+---
+format:
+  revealjs:
+    theme: default
+    slide-number: true
+    transition: fade
+    css: styles.css
+    center: false
+    footer: "Cloud Computing for Economics"
+---
+
+## Course Introduction
+
+## About the Instructor 
+
+&nbsp;
