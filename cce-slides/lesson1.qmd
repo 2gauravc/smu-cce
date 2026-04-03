@@ -11,6 +11,19 @@ format:
 
 ## Course Introduction
 
+### Course Philosphy 
+
+- Creativity is universal; everyone should experience it    
+- Creating something real and sharing it wth others gives us true happiness
+
+### Pre-requisites 
+
+- Exposure to data analytics (Python, SQL) and to AWS Cloud is helpful
+- All key concepts will be introduced from first principles
+
+This course welcomes students from diverse backgrounds. 
+
+
 ## About the Instructor 
 
 &nbsp;
