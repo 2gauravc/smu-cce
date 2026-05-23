@@ -1,4 +1,4 @@
-# Step-1 Open a Github Account with your SMU email ID 
+# Step-1 Create a Github Account with your SMU email ID 
 
 Most of you who have taken the core course `Data Analytics for Economics` will already have this. You can directly skip to Step 2. 
 

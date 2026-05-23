@@ -1,34 +1,83 @@
-### Git clone the repo
-```
-git clone https://github.com/2gauravc/smu-cce.git
-```
+# SMU CCE Financial Data Notebooks
 
-### Create and activate an environment
-```
-python3 -m venv cce-env
-source cce-env/bin/activate
-```
+A collection of Jupyter notebooks for fetching and analyzing financial data using yfinance.
 
-### Switch to repo directory  
-```
+## Notebooks
+
+1. **filings.ipynb** - SEC Financial Statements
+   - Retrieves income statement, balance sheet, and cash flow data for any stock ticker
+
+2. **news.ipynb** - Stock News
+   - Fetches and displays the latest news articles for a given stock
+
+3. **stock_price_ratings.ipynb** - Stock Price & Analyst Ratings
+   - Gets current stock price and analyst recommendations/ratings
+
+## Setup
+
+### Prerequisites
+- Python 3.8 or higher
+- Jupyter Notebook or JupyterLab
+
+### Installation
+
+1. Clone or navigate to this repository:
+```bash
 cd smu-cce
 ```
 
-### Install dependencies
+2. Create a virtual environment (optional but recommended):
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
+
+3. Install dependencies:
+```bash
 pip install -r requirements.txt
 ```
 
-### Install quarto 
+## Running the Notebooks
+
+### Option 1: Using Jupyter Notebook
+```bash
+jupyter notebook notebooks/
 ```
-cd /tmp
-curl -fL --retry 5 --retry-delay 2 -o quarto.deb \
-  https://github.com/quarto-dev/quarto-cli/releases/download/v1.9.36/quarto-1.9.36-linux-amd64.deb
-sudo dpkg -i quarto.deb
+Then open the desired `.ipynb` file in your browser and run the cells.
+
+### Option 2: Using JupyterLab
+```bash
+jupyter lab notebooks/
 ```
 
-## Run Quarto and preview slides 
+### Option 3: Using VS Code
+1. Install the Jupyter extension in VS Code
+2. Open any `.ipynb` file
+3. Run cells individually or use "Run All"
 
+## Example Usage
+
+Each notebook contains example function calls. For instance, to get financials for Micron (MU):
+
+```python
+get_financials("MU")
 ```
-quarto preview lesson1.qmd
+
+To get news for Google (GOOG):
+
+```python
+get_news("GOOG")
 ```
+
+To get price and ratings for a stock:
+
+```python
+get_price("AAPL")
+get_analyst_ratings("AAPL")
+```
+
+## Notes
+
+- Stock tickers should be valid symbols (e.g., AAPL, GOOGL, MSFT, etc.)
+- Data is sourced from Yahoo Finance via the yfinance library
+- Some stocks may not have analyst ratings available

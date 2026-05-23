@@ -1,4 +1,1 @@
-edgartools
-finnhub-python
-yfinance
-pandas
+yfinance>=0.2.0
