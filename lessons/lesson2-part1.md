@@ -237,18 +237,12 @@ git clone https://github.com/johnsmith/smu-cce.git
 
 ---
 
-## Move into the Project Folder
+## Navigate to the Project Folder
 
-After cloning completes:
+After cloning completes, navigate to the project folder:
 
 ```bash
 cd smu-cce/
-```
-
-Example:
-
-```bash
-cd smu-cce
 ```
 
 ---
@@ -291,7 +285,7 @@ The installation may take a few minutes.
 
 ## Open the Notebook
 
-In the left hnad Explorer bar, click on notebooks/ folder and open the `filings.ipynb` notebook.
+In the left hand Explorer bar, click on notebooks/ folder and open the `filings.ipynb` notebook.
 
 ```text
 notebooks/filings.ipynb
