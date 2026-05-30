@@ -8,7 +8,7 @@ This guide explains how to apply for the Github Student Developer Pack using you
 
 ## Task 1: Sign In
 
-Start at: https://github.com/settings/education/benefits
+[GitHub Student Developer Pack](https://github.com/settings/education/benefits) *(opens in a new tab if you Ctrl+Click / Cmd+Click)*
 
 Log in using your SMU email by clicking **Continue with Google**.
 Use your SMU email **without the faculty name**.

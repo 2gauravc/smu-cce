@@ -3,13 +3,13 @@
 This is a quick introduction to Github to get you started.  
 For more on Github, take the free course [Introduction to Github](https://education.github.com/experiences/intro_to_github)
 
-## Basic Git Commands
+## Basic Git Workflow and Commands
 
 Git is a version control system used to track changes in code and collaborate with others.
 
 ---
 
-## Typical Workflow
+### Typical Workflow
 
 The basic workflow is:
 
@@ -21,7 +21,7 @@ The basic workflow is:
 
 ---
 
-## git clone
+### git clone
 
 Used to copy a Github repository onto your machine or cloud VM.
 
@@ -51,7 +51,7 @@ cd nimbus
 
 ---
 
-## git status
+### git status
 
 Shows the current state of your repository.
 
@@ -70,7 +70,7 @@ This is the most commonly used Git command.
 
 ---
 
-## git add
+### git add
 
 Used to stage files before committing.
 
@@ -88,7 +88,7 @@ git add notebook.ipynb
 
 ---
 
-## git commit
+### git commit
 
 Creates a checkpoint (snapshot) of your changes.
 
@@ -114,7 +114,7 @@ git commit -m "Fixed notebook errors"
 
 ---
 
-## git push
+### git push
 
 Uploads your committed changes to Github.
 
@@ -130,7 +130,7 @@ After pushing:
 
 ---
 
-## Common Daily Workflow
+### Common Daily Workflow
 
 ```bash
 git status
@@ -141,21 +141,21 @@ git push
 
 ---
 
-## Useful Additional Commands
+### Useful Additional Commands
 
-### List files
+#### List files
 
 ```bash
 ls
 ```
 
-### Check current folder
+#### Check current folder
 
 ```bash
 pwd
 ```
 
-### Move into a folder
+#### Move into a folder
 
 ```bash
 cd folder-name
@@ -173,4 +173,4 @@ cd folder-name
 
 ---
 
-# Generate a README and push to Github
+## Make edits to the README and push to Github
