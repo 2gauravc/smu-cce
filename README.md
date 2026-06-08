@@ -28,8 +28,9 @@ cd smu-cce
 
 2. Create a virtual environment (optional but recommended):
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+cd ../ 
+python -m venv cce-env
+source cce-env/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
 3. Install dependencies:
@@ -41,6 +42,7 @@ pip install -r requirements.txt
 
 ### Option 1: Using Jupyter Notebook
 ```bash
+cd smu-cce/
 jupyter notebook notebooks/
 ```
 Then open the desired `.ipynb` file in your browser and run the cells.
