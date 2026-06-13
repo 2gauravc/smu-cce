@@ -25,7 +25,7 @@ A beginner-friendly Streamlit web application for analyzing stocks with real-tim
 From the `smu-cce` directory, run:
 
 ```bash
-streamlit run app/app.py
+python -m streamlit run app/app.py
 ```
 
 This will start a local web server. The app will open in your default browser at `http://localhost:8501`.
