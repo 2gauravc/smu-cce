@@ -1,7 +1,11 @@
 
-# Install the Nimbus web app on AWS - using code 
+# Use AI to generate IaC script. Install and run Nimbus app on EC2
 
-## Step 1: Create a `scripts` folder 
+## Task 1: Generate IaC script to create VPC set-up. 
+
+Use AI to generate an IaC script. IaC script should create the VPC set-up (same as Lab 2) 
+
+### Step 1: Create a `scripts` folder 
 
 From the root of your repo:
 
@@ -11,9 +15,7 @@ mkdir scripts/
 ```
 
 
-## Step 2: Describe what you want 
-
-Copy the instructions from Lab 2 Tasks 1-3 (create VPC, Create subnets, Create Security Group) to generate an IaC template:
+### Step 2: Describe what you want 
 
 ```text
 Use this prompt:
@@ -100,17 +102,18 @@ Requirements:
 - Make the template suitable for students learning AWS networking.
 ```
 
-## Step3: Run and verify 
+### Step3: Run and verify 
 
-We will use the AWS Sandbox Environment to create the infrastructure and host our app. 
+Run the IaC script on the Sandbox environment. 
 
-### Activate the Sandbox Environment 
+#### Activate the Sandbox Environment 
 
 - On your Course Dashboard, go to Modules. Scroll down to `Sandbox`. Click `Sandbox Environment`
 - Click `Start Lab`. Wait for completion (this may take several minutes)
 - Click `AWS`
 
-### Run the IaC script as create the set-up
+#### Run the IaC script as create the set-up
+
 Download the IaC file generated from `scripts/lesson5-vpc-cf.yml` to your laptop. This is an AWS CloudFormation script.
 
 We will use Cloud Formation service to set-up the infrastructure using this script. 
@@ -131,14 +134,15 @@ We will use Cloud Formation service to set-up the infrastructure using this scri
 12. Wait for the stack status to change from **CREATE_IN_PROGRESS** to **CREATE_COMPLETE**. This may take several minutes
 13. Once the stack has been created successfully, open the **Resources** tab to view information about the resources that were created. Note that `LabVPC` was created 
 
-### Start an EC2 instance 
 
-The IaC template ahas set-up the VPC and the security group. Now we create the EC2 instance. This is your web server. 
+## Task 2 - Start an EC2 instance 
+
+The IaC template has set-up the VPC and the security group. Now we create the EC2 instance. This is your web server. 
 
 **EC2 set-up**
 
 ```text
-Amazon Linux (default)
+Amazon Linux 2023 (default. Notice the AMI ID 
 t2.micro 
 Key pair: leave blank 
 Network: Edit. Choose `lab-vpc` 
@@ -153,12 +157,14 @@ Advanced Details -> User data. Copy and paste the code shown below
 ```bash 
 #!/bin/bash
 # Update packages
-yum update -y
+dnf update -y
 # Install software
-yum install -y git python3 python3-pip
+dnf install -y git python3 python3-pip
 ```
 
 Click Launch Instance (Choose Proceed Without Key Pair)
+
+## Task 3 - Install and run Nimbus App 
 
 ### Start Streamlit App 
 
@@ -174,6 +180,11 @@ You will see the linux prompt.
 # Clone repo
 cd ~ #go to user home directory
 git clone https://github.com/2gauravc/smu-cce.git
+
+# Create Environment 
+python3 -m venv venv
+source venv/bin/activate
+
 cd smu-cce/ 
 
 # Install Python dependencies
@@ -189,6 +200,3 @@ python3 -m streamlit run app/app.py
 - Copy the Public IPv4 DNS of the EC2 server shown in the Details tab. 
 - Go to a web browser, paste the `Public IPv4 DNS`:8501 to access the app. 
 
-## Step 4: Edit the code (if needed)
-
-If there are errors / problems use AI to problem solve. 
