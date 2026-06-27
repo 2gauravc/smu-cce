@@ -18,7 +18,6 @@ Copy the instructions from Lab 2 Tasks 1-3 (create VPC, Create subnets, Create S
 ```text
 Use this prompt:
 
-```text
 Create an AWS CloudFormation YAML IaC template for us-east-1. The template should build the following VPC lab environment:
 
 1. VPC
