@@ -25,7 +25,7 @@ Use this prompt in Copilot:
 ```text
 I have a repo with Python code inside the notebooks/ folder.
 
-Create a simple Streamlit web app using the code in notebooks/.
+Create a simple Streamlit web app using the code in notebooks/. Save it to app/
 
 Goal:
 Convert the notebook logic into a beginner-friendly Streamlit application.

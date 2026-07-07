@@ -20,7 +20,9 @@ mkdir scripts/
 ```text
 Use this prompt:
 
-Create an AWS CloudFormation YAML IaC template for us-east-1. The template should build the following VPC lab environment:
+Create an AWS CloudFormation YAML IaC template for us-east-1. Save the template to scripts/lesson5-vpc-cf.yml
+
+The template should build the following VPC lab environment:
 
 1. VPC
 - Name: LabVPC
