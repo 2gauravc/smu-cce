@@ -1,6 +1,6 @@
 # Use AI to generate IaC script 
 
-Extend IaC script from lesson 5 (VPC set-up) to incldue EC2 set-up and app install and run. 
+Extend IaC script from lesson 5 (VPC set-up) to include EC2 set-up and app install and run. 
 
 ## Step 1 - Set-up code repo 
 
@@ -14,7 +14,7 @@ cp scripts/lesson5-vpc-cf.yml scripts/lesson6-new.yml
 
 Use this prompt:
 
-Generate a new Cloud Formation script. Use the existing Cloud Formation script under `scripts/lesson6-new.yml` and add the folliwng to it.
+Generate a new Cloud Formation script. Use the existing Cloud Formation script under `scripts/lesson6-vpc-ec2-app-cf.yml` and add the following to it.
 
 1. EC2 set-up
 
