@@ -17,8 +17,9 @@ mkdir scripts/
 
 ### Step 2: Describe what you want 
 
-```text
 Use this prompt:
+
+```text
 
 Create an AWS CloudFormation YAML IaC template for us-east-1. Save the template to scripts/lesson5-vpc-cf.yml
 

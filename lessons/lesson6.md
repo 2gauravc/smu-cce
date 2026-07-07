@@ -7,14 +7,16 @@ Extend IaC script from lesson 5 (VPC set-up) to include EC2 set-up and app insta
 Copy `lesson5-vpc-cf.yml` to a new yml file. 
 
 ```bash 
-cp scripts/lesson5-vpc-cf.yml scripts/lesson6-new.yml 
+cp scripts/lesson5-vpc-cf.yml lesson6-vpc-ec2-app-cf.yml 
 ```
 
 ## Step 2 - Describe what you want 
 
 Use this prompt:
 
-Generate a new Cloud Formation script. Use the existing Cloud Formation script under `scripts/lesson6-vpc-ec2-app-cf.yml` and add the following to it.
+```text 
+
+Generate a new Cloud Formation script. Use the existing Cloud Formation script under scripts/lesson6-vpc-ec2-app-cf.yml and add the following to it.
 
 1. EC2 set-up
 
@@ -52,6 +54,14 @@ nohup python3 -m streamlit run app/app.py \
 
 Change the Output of the script to show the Pubic IPv4 address of the EC2 instance 
 
+Requirements:
+- Use valid CloudFormation YAML.
+- Use clear logical resource names.
+- Add Name tags to all resources.
+- Add comments explaining each major section.
+- Make the template suitable for students learning AWS networking.
+
+```
 
 ## Step 3 Run & Verify 
 
