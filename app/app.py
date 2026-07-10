@@ -118,10 +118,11 @@ if st.sidebar.button("🚀 Run Analysis", use_container_width=True):
                     f"- {article['title']}: {article['description']}"
                     for article in articles
                 ]
+                news_summary = "\n".join(article_lines) if article_lines else "No news articles found."
                 analysis_markdown = (
                     f"# Latest News for {ticker}\n\n"
                     f"**Analysis Type:** {analysis_type}\n\n"
-                    f"{'\n'.join(article_lines) if article_lines else 'No news articles found.'}"
+                    f"{news_summary}"
                 )
                 st.session_state.analysis_markdown = analysis_markdown
                 st.session_state.analysis_ticker = ticker
