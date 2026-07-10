@@ -10,8 +10,6 @@ Usage:
     streamlit run app.py
 """
 
-from urllib.parse import quote
-
 import streamlit as st
 
 from helpers import (
@@ -197,13 +195,15 @@ saved_files = list_saved_analyses()
 if not saved_files:
     st.info("No saved analyses yet. Run an analysis and save it to create a markdown report.")
 else:
+    st.caption("Click any button below to download a saved markdown report.")
     for saved_file in saved_files:
         markdown_content = saved_file.read_text(encoding="utf-8")
-        encoded_content = quote(markdown_content)
-        data_url = f"data:text/markdown;charset=utf-8,{encoded_content}"
-        st.markdown(
-            f'<a href="{data_url}" target="_blank" rel="noopener noreferrer">{saved_file.name}</a>',
-            unsafe_allow_html=True,
+        st.download_button(
+            label=f"⬇️ {saved_file.name}",
+            data=markdown_content,
+            file_name=saved_file.name,
+            mime="text/markdown",
+            use_container_width=True,
         )
 
 # Footer with instructions
